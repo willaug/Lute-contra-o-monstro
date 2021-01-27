@@ -1,0 +1,510 @@
+/**
+ * Estilo em CSS3/Style in CSS3
+ * Você contra o vírus - Simples jogo em VueJS e Javascript/ Simple game in VueJS and Javascript
+ * Autor/Author: William Augusto
+ * Lançado em/Released: 27/01/2021
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400&display=swap');
+
+/* presets */
+:root {
+    --c0: #353535;
+    --c1: #e8505b;
+    --c2: #f5b9bd;
+    --c3: #fadcde;
+    --c4: #41D6A1;
+    --c5: #d7f8ed;
+    --c6: #e88850;
+    --c7: #eeebeb;
+    --c8: #e7e2e2;
+    --c9: #dfdddd;
+    --c10: #7d6599;
+    --fr: 'Roboto', sans-serif;
+    --fo: 'Open Sans', sans-serif
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    outline: none;
+    text-decoration: none;
+    -webkit-tap-highlight-color: none;
+}
+.pr{
+    position: relative;
+}
+
+.pa{
+    position: absolute;
+}
+
+.middle{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.flex{
+    display: flex;
+}
+
+.center{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.top{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* containers */
+.simpleContainer img, .simpleContainer svg{
+    margin-top: 50px;
+    width: 240px;
+    height: 240px;
+    margin-bottom: 17px;
+}
+
+.middle-main-text{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 30px;
+    letter-spacing: 0.2px;
+    color: var(--c0);
+}
+
+.btn{
+    margin: 30px 0px 30px 0px;
+    padding: 12px 40px;
+    border-radius: 40px;
+    font-weight: 400;
+    color: #101010;
+    letter-spacing: 1px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: var(--c7);
+    transition: all .2s ease;
+}
+
+.btn:hover{
+    background-color: var(--c8);
+}
+
+/* dev container */
+
+.devContainer{
+    margin: 30px 0 30px 0;
+    display: block;
+    width: 178px;
+    transition: all .3s ease;
+}
+
+.devContainer img{
+    width: 40px;
+    height: 40px;
+}
+
+.small-text{
+    font-size: 12px;
+    color: #606060;
+    line-height: 10px;
+}
+
+.medium-text{
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    font-weight: 400;
+    color: var(--c0);
+}
+
+.dev-text{
+    transition: all .3s ease;
+}
+
+.devPicture{
+    display: none;
+}
+
+/* loader */
+.loading{
+    position: fixed;
+    transition: all .3s ease;
+}
+
+.loader{
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    border: 4px solid white;
+    border-top: 4px solid var(--c10);
+    -webkit-animation: loading 1s linear infinite;
+    animation: loading 1s linear infinite;
+}
+
+@keyframes loading{
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes loading{
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* game container */
+.gameContainer{
+    width: 100%;
+    margin-top: 65px;
+}
+
+/* scoreboard */
+.scoreboard{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 0 30px;
+}
+
+/* score bar */
+.score-circle{
+    width: 80px;
+    height: 80px;
+    border: 5px solid var(--c4);
+    fill: var(--c4);
+    border-radius: 80px;
+    transition: all .4s ease;
+    background-color: #fff;
+    z-index: 30;
+}
+
+.score-circle svg{
+    width: 45px;
+    height: 45px;
+}
+
+.score-counter{
+    color: var(--c4);
+}
+
+.counter{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    width: 28px;
+}
+
+.score-counter .fas{
+    font-size: 24px;
+    line-height: 24px;
+    margin: 0px 10px 0px 10px;
+}
+
+.controlsContainer{
+    margin-top: 70px;
+}
+
+.btn-action, .btn-restart{
+    width: 200px;
+    height: 40px;
+    position: relative;
+    display: block;
+    margin-bottom: 22px;
+    left: 50%;
+    cursor: pointer;
+    text-align: left;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #303030;
+    background-color: #eeebeb;
+    transition: all .2s ease;
+    opacity: 1;
+}
+
+.btn-restart{
+    margin-top: 80px;
+}
+
+.opcn{
+    opacity: .5;
+    transition: all .2s ease;
+}
+.opc{
+    opacity: 1;
+    transition: all .2s ease;
+}
+
+.visible{
+    visibility: visible;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.btn-action .fas, .btn-restart .fas{
+    margin-left: 30px;
+    margin-right: 12px;
+    width: 19px;
+    text-align: center;
+}
+
+.logContainer{
+    max-height: 400px;
+    width: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: none;
+    cursor: normal;
+}
+
+.logContainer::-webkit-scrollbar {
+    width: 0px;
+}
+
+.log{
+    width: 300px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 400;
+    color: #606060;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+.log:nth-child(odd){
+    background-color: var(--c3);
+}
+
+.log:nth-child(even){
+    background-color: var(--c5);
+}
+
+.logContainer div{
+    margin-bottom: 10px;
+}
+
+.logContainer div:last-child{
+    margin-bottom: 0;
+}
+
+.score-progress{
+    width: 260px;
+    position: absolute;
+    top: 50%;
+    height: 40px;
+    border-radius: 33px;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+
+.progress{
+    width: 100%;
+    background-color: var(--c4);
+    position: absolute;
+    height: 33px;
+    border-radius: 33px;
+    transition: all .4s ease;
+    display: none;
+}
+
+.l{
+    left: 105px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.r{
+    right: 105px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.l-p{
+    left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.r-p{
+    right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* caution/danger */
+.caution{
+    background-color: var(--c6);
+}
+
+.cautionBorder{
+    fill: var(--c6);
+    border-color: var(--c6);
+}
+
+.danger{
+    background-color: var(--c1);
+}
+
+.dangerBorder{
+    fill: var(--c1);
+    border-color: var(--c1);
+}
+
+/* breakpoints */
+@media (min-width: 700px){
+    .simpleContainer img, .simpleContainer svg{
+        margin-top: 60px;
+        width: 350px;
+        height: 350px;
+        margin-bottom: 10px;
+    }
+    
+    .middle-main-text{
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 0.6px;
+    }
+    
+    .btn{
+        padding: 14px 60px;
+        letter-spacing: 1.3px;
+        font-size: 17px;
+    }
+
+    .devContainer{
+        margin: 0px 0 0px 0;
+        width: 210px;
+        position: fixed;
+        left: auto;
+        transform: translate(0);
+        bottom: 0px;
+        height: 50px;
+        bottom: 35px;
+        right: 35px;
+        transition: all .3s ease;
+    }
+    
+    .devContainer img{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .small-text{
+        font-size: 14px;
+    }
+    
+    .medium-text{
+        font-size: 16px;
+        letter-spacing: 1.2px;
+    }
+
+    .devPicture{
+        width: 50px;
+        display: block;
+        z-index: 400;
+    }
+
+    .devPicture:hover{
+        filter: grayscale(30%)
+    }
+}
+
+@media (min-width: 1000px){
+    .gameContainer{
+        width: 1000px;
+        margin-top: 65px;
+    }
+    
+    /* scoreboard */
+    .scoreboard{
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        box-sizing: border-box;
+        align-items: center;
+        padding: 0 0px;
+    }
+    
+    
+    /* score bar */
+    .score-circle{
+        width: 105px;
+        height: 105px;
+        border-radius: 105px;
+    }
+    
+    .score-circle svg{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .counter{
+        line-height: 30px;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0;
+        width: 30px;
+    }
+    
+    .score-counter .fas{
+        font-size: 30px;
+        line-height: 30px;
+        margin: 0px 15px 0px 15px;
+    }
+    
+    .controlsContainer{
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .btn-action, .btn-restart{
+        width: 250px;
+        height: 45px;
+        margin-bottom: 22px;
+        border-radius: 10px;
+        font-size: 17px;
+    }
+    
+    .btn-restart{
+        margin-top: 80px;
+    }
+    
+    .btn-action .fas, .btn-restart .fas{
+        margin-left: 45px;
+        margin-right: 16px;
+        width: 19px;
+        text-align: center;
+    }
+
+    .logContainer{
+        display: block;
+    }
+
+    .progress{
+        display: block;
+    }
+}
